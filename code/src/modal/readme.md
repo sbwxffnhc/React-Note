@@ -2,7 +2,7 @@
 
 ###　效果预览
 
-![](../../../assest/%5CUsers%5CMia%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1557906162419.png)
+![](../../../assest/modal.png)
 
 ### 如何使用
 
