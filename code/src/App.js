@@ -1,44 +1,27 @@
 import React from 'react';
 import Notice from './icon-use'
 import Modal from './modal'
-/**用函数代替 React.Component */
-function Letter(props) {
-  const letterStyle={
-    padding:10,
-    margin:10,
-    backgroundColor:props.bgcolor,
-    color:"#333",
-    display:"inline-block",
-    fontFamily:'monospace',
-    fontSize:32,
-    textAlign:'center'
-  }
-  return (
-    <div style={letterStyle}>        
-      {props.children}
-    </div>
-  );
-}
+import Progress from './modal/progress'
 
-function App() {
+class App extends React.Component {
+  state={
+    visble:false
+  }
+  handleRestart=()=>{
+    this.setState({
+      visble:!this.state.visble
+    })
+  }
+  render() {
   return (
     <div >
-      <Letter bgcolor='#58b3ff'>Y</Letter>
-      <Letter bgcolor='#ff605f'>E</Letter>
-      <Letter bgcolor='#ffd520'>S</Letter>
-      <Notice type='warning' content="本操作会导致重启！" />
-      
-
-      <Modal
-        title={'Title'}
-        style={{width:300}}
-        visible={true}
-        close={true}
-        >        
-          123
-        </Modal>
+      <button onClick={this.handleRestart}>Restart</button>
+        <Progress 
+            visble={this.state.visble} 
+            locktime={20}
+            handleRedirect={this.handleRestart}/>
     </div>
-  );
+  );}
 }
 
 export default App;
