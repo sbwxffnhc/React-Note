@@ -80,7 +80,6 @@ export default App;
 
 ```jsx
 import React from 'react';
-import Notice from './icon-use'
 import Modal from './modal'
 import Progress from './modal/progress'
 

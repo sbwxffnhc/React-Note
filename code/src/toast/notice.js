@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
-import './toast.css'
 
 class Notice extends Component {
     render() {
         const icons = {
-            info: 'icon-danchuangtishitubiao',
-            success: 'icon-chenggongtishitubiao',
-            warning: 'icon-danchuangtishitubiao',
-            error: 'icon-cuowutishitubiao',
+            info: 'icon-info-circle-fill',
+            success: 'icon-check-circle-fill',
+            warning: 'icon-warning-circle-fill',
+            error: 'icon-close-circle-fill',
+            loading: 'icon-loading'
         }
         const { type, content } = this.props
         return (
-            <div className="modal dialog">
+            <div style={{textAlign:' center'}}>
             <div className={`toast-notice ${type}`}>
-                <svg>
+                <svg className="icon" aria-hidden="true">
                     <use xlinkHref={`#${icons[type]}`} />
                 </svg>
                 <span>{content}</span>
