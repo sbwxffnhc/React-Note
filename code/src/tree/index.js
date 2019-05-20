@@ -1,9 +1,5 @@
-import React from 'react';
-import Toast from './toast'
-import Tree from './tree'
-import Confirm from './modal/confirm'
-import Progress from './modal/progress'
-
+import React, { Component } from 'react';
+import './index.css'
 var tree = {
   title: "American Government System",
   childNodes: [
@@ -48,32 +44,45 @@ var tree = {
   ]
 };
 
-class App extends React.Component {
-  state={
-    visble:false
+class Tree extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      visible: true,
+    };
   }
-  handleShow=()=>{
-    this.setState({visble:true})
-  }
-  handleConfirm=()=>{
-    //do
-    this.setState({visble:false})
-  }
-  handleCancel=()=>{
-    this.setState({visble:false})
+  toggle() {
+    this.setState({ visible: !this.state.visible });
+  };
+  renderTree(node) {
+    if (node.childNodes != null) {
+      return node.childNodes.map((node, index) => {
+        return (
+            <li key={index}>
+              <span onClick={() => { this.toggle() }}>
+                {node.title}</span>
+              <ul>
+                {this.renderTree(node)}
+              </ul>
+            </li>
+        )
+      })
+    }
   }
   render() {
-  return (
-    <div >
-    <button onClick={this.handleShow}>show</button>
-    <Confirm visble={this.state.visble}
-    handleOk={this.handleConfirm}
-    handleCancel={this.handleCancel}>
-    Sure to restart the service</Confirm>
-
-    <Tree node={tree}></Tree>
-    </div>
-  );}
+    return (
+      <div className="tree">
+      <ul>
+          <li>
+            <span onClick={() => { this.toggle() }}>
+              {this.props.node.title}</span>
+            
+            <ul>{this.renderTree(this.props.node)}</ul>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Tree;

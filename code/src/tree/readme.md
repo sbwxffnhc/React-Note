@@ -1,8 +1,20 @@
+## 全局对话框组件 Modal
+
+###　效果预览（modal.js）
+
+![1558346527275](C:\Users\Mia\AppData\Roaming\Typora\typora-user-images\1558346527275.png)
+
+### 如何使用
+
+提供参数有：
+
++ node:树结构（树结构如下示例所示）
+
+示例
+
+```jsx
 import React from 'react';
-import Toast from './toast'
 import Tree from './tree'
-import Confirm from './modal/confirm'
-import Progress from './modal/progress'
 
 var tree = {
   title: "American Government System",
@@ -48,32 +60,24 @@ var tree = {
   ]
 };
 
-class App extends React.Component {
-  state={
-    visble:false
-  }
-  handleShow=()=>{
-    this.setState({visble:true})
-  }
-  handleConfirm=()=>{
-    //do
-    this.setState({visble:false})
-  }
-  handleCancel=()=>{
-    this.setState({visble:false})
-  }
-  render() {
+function App() {
   return (
     <div >
-    <button onClick={this.handleShow}>show</button>
-    <Confirm visble={this.state.visble}
-    handleOk={this.handleConfirm}
-    handleCancel={this.handleCancel}>
-    Sure to restart the service</Confirm>
-
     <Tree node={tree}></Tree>
     </div>
-  );}
+  );
 }
 
 export default App;
+```
+
+组件依赖
+
+```
+{
+    "react": "^16.4.2"
+}
+
+```
+
+
