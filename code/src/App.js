@@ -1,8 +1,5 @@
 import React from 'react';
-import Toast from './toast'
-import Tree from './tree'
-import Confirm from './modal/confirm'
-import Progress from './modal/progress'
+import {Tree,Progress,Modal,Toast,Confirm} from './components'
 
 var tree = {
   title: "American Government System",
