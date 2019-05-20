@@ -45,21 +45,12 @@ var tree = {
 };
 
 class Tree extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      visible: true,
-    };
-  }
-  toggle() {
-    this.setState({ visible: !this.state.visible });
-  };
   renderTree(node) {
     if (node.childNodes != null) {
       return node.childNodes.map((node, index) => {
         return (
             <li key={index}>
-              <span onClick={() => { this.toggle() }}>
+              <span>
                 {node.title}</span>
               <ul>
                 {this.renderTree(node)}
@@ -74,7 +65,7 @@ class Tree extends Component {
       <div className="tree">
       <ul>
           <li>
-            <span onClick={() => { this.toggle() }}>
+            <span>
               {this.props.node.title}</span>
             
             <ul>{this.renderTree(this.props.node)}</ul>
