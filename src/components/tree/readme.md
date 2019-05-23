@@ -2,7 +2,7 @@
 
 ###　效果预览（modal.js）
 
-![1558346527275](C:\Users\Mia\AppData\Roaming\Typora\typora-user-images\1558346527275.png)
+![1558346527275](../../../assest/tree.png)
 
 ### 如何使用
 
