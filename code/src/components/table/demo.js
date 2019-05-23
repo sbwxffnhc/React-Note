@@ -20,6 +20,14 @@ class App extends React.Component {
     handleEdit=(index)=>{
         console.log(index)
     }
+    handleDelRule=(indexArr)=>{
+        //根据自己想要的数据进行组合
+        let delIndex = []
+        indexArr.map((item,index)=>{
+            delIndex.push(rules[item].index)
+        })        
+        console.log(indexArr,delIndex)
+    }
   render() {
       
 const columns = [
@@ -49,7 +57,7 @@ const columns = [
       render: (index,record) => (
         <td key='actiontd'>
         <button className='button-del' onClick={()=>this.handleEdit(index)}>EDIT</button>
-        <button className='button-del' onClick={()=>this.handleDelRule([record.index])}>Delete</button>
+        <button className='button-del' onClick={()=>this.handleDelRule([index])}>Delete</button>
         </td>
       ),
     },
@@ -58,7 +66,8 @@ const columns = [
     <div >
       TABLE
         <Table columns={columns}
-        rules={rules}></Table>
+        handleDelRule={this.handleDelRule}
+        dataSource={rules}></Table>
     </div>
   );}
 }

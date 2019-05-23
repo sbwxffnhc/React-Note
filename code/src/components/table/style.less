@@ -44,7 +44,7 @@
         tfoot{
             tr{
                 td{
-                    background-color: #f1f1f1;
+                    background-color: rgba(216, 216, 216, .3);
                     border: 1px solid #ddd;
                     padding: 8px;
                     line-height: 1.42857143;
@@ -59,6 +59,12 @@
                     border: 1px solid #91a5db;
                     color: #fff;
                     margin: 2px;
+                    &:disabled{
+                        background: #ccc;
+                        color: #6f6c6c;
+                        border: 1px solid #ccc;
+                        cursor: auto;
+                    }
                 }
                 button.del{
                     float: left;
@@ -69,11 +75,11 @@
                     border: 1px solid #c3c3c3;
                     color: #6f6c6c;
                     margin: 2px;
-                    :hover{
+                    &:hover{
                         background: #ff3f3f;
                         border: 1px solid #ff2e2e;
                     }
-                    :disabled{
+                    &:disabled{
                         background: #ccc;
                         border: 1px solid #ccc;
                         cursor: auto;
@@ -90,7 +96,7 @@
             border: 1px solid transparent;
             border-radius: 4px;
             margin-left:10px;
-            :hover{
+            &:hover{
                 background: #ff3f3f;
                 border: 1px solid #ff2e2e;
             }
