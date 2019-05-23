@@ -22,6 +22,7 @@ class Table extends React.Component {
   componentWillReceiveProps(nextProps){
     if(this.props.dataSource!== nextProps.dataSource){
       if(nextProps.dataSource.length>0){
+        this.indexArr=[]
         for(var i =0;i<nextProps.dataSource.length;i++){
           this.indexArr.push(false)
         }
