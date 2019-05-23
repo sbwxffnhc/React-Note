@@ -2,6 +2,11 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types';
 import './style.less'
 class Table extends React.Component {
+    static defaultProps = {
+        selectKey:true,
+        addDisabled:false,
+        showAdd:true,
+  };
     constructor(props){
         super(props)        
         this.state={
