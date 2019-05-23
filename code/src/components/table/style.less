@@ -1,0 +1,99 @@
+.table-box{
+    table{        
+        border-spacing: 0;
+        border-collapse: collapse;
+        text-align: center;
+        border: 1px solid #ddd;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        thead{
+            tr{
+                background-color: #5ab0d6;
+                color: #fff;
+                border: 1px solid #ddd;
+                padding: 8px;
+                line-height: 1.42857143;
+                vertical-align: middle;
+                th{
+                    background-color: #5ab0d6;
+                    color: #fff;
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    line-height: 1.42857143;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tbody{
+            tr{
+                background-color: #fff;
+                border: 1px solid #ddd;
+                padding: 8px;
+                line-height: 1.42857143;
+                vertical-align: middle;
+                td{
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    line-height: 1.42857143;
+                    vertical-align: middle;
+                }
+            }
+        }
+        tfoot{
+            tr{
+                td{
+                    background-color: #f1f1f1;
+                    border: 1px solid #ddd;
+                    padding: 8px;
+                    line-height: 1.42857143;
+                    vertical-align: top;
+                }
+                button.add{
+                    float: left;
+                    width: 122px;
+                    height: 31px;
+                    line-height: 31px;
+                    background: #72a1d0;
+                    border: 1px solid #91a5db;
+                    color: #fff;
+                    margin: 2px;
+                }
+                button.del{
+                    float: left;
+                    width: 122px;
+                    height: 31px;
+                    line-height: 31px;
+                    background: #ffffff;
+                    border: 1px solid #c3c3c3;
+                    color: #6f6c6c;
+                    margin: 2px;
+                    :hover{
+                        background: #ff3f3f;
+                        border: 1px solid #ff2e2e;
+                    }
+                    :disabled{
+                        background: #ccc;
+                        border: 1px solid #ccc;
+                        cursor: auto;
+                    }
+                }
+            }
+        }
+        .button-del{
+            font-size: 12px;
+            line-height: 1.5;
+            color: #5ab0d6;
+            padding: 6px 12px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-radius: 4px;
+            margin-left:10px;
+            :hover{
+                background: #ff3f3f;
+                border: 1px solid #ff2e2e;
+            }
+        }
+    }
+}

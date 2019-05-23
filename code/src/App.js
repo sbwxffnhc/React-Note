@@ -1,6 +1,6 @@
 import React from 'react';
 import {Tree,Progress,Modal,Toast,Confirm} from './components'
-
+import Table from './components/table'
 var tree = {
   title: "American Government System",
   childNodes: [
@@ -68,7 +68,7 @@ class App extends React.Component {
     handleCancel={this.handleCancel}>
     Sure to restart the service</Confirm>
 
-    <Tree node={tree}></Tree>
+    <Table></Table>
     </div>
   );}
 }
