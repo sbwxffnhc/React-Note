@@ -1,6 +1,6 @@
-## 全局对话框组件 Modal
+## Tree 树结构
 
-###　效果预览（modal.js）
+###　效果预览（index.js）
 
 ![1558346527275](../../../assest/tree.png)
 
